@@ -54,6 +54,7 @@ public class AuthController {
                 .orElse("USER");
         Map<String, String > res=new HashMap<>();
         Optional<Users> user=userRepo.findByEmailId(userDetails.getUsername());
+        //poke
         res.put("token", token);
         res.put("Role", role);
         res.put("name", user.get().getFullName());
